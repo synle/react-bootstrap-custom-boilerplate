@@ -32,3 +32,13 @@ HTML
 Sass Files
 @import "stylesheets/base"; // this is the core thing, you need this for styling...
 ```
+
+
+
+## References
+Special thanks to the following folks who created awesome frameworks.
+- Twitter Bootstrap
+- React Bootstrap
+- Babel
+- Webpack
+- Facebook React
