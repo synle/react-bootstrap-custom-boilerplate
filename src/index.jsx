@@ -295,14 +295,15 @@ _pushExampleDom(
 
 
 
-function FieldGroup({ id, label, help, ...props }) {
-  return (
-    <FormGroup controlId={id}>
-      <ControlLabel>{label}</ControlLabel>
-      <FormControl {...props} />
-      {help && <HelpBlock>{help}</HelpBlock>}
-    </FormGroup>
-  );
+const FieldGroup = function (params) {
+    const {id, label, help, props} = params;
+    return (
+        <FormGroup controlId={id}>
+            <ControlLabel>{label}</ControlLabel>
+            <FormControl {...props} />
+            {help && <HelpBlock>{help}</HelpBlock>}
+        </FormGroup>
+    );
 }
 
 _pushExampleDom(
@@ -398,9 +399,10 @@ _pushExampleDom(
               Submit
             </Button>
           </form>
-    )
-    '<Form>  <FormGroup controlId={id}>Label</FormGroup></Form>'
+    ),
+    '<Form> <FormGroup> <ControlLabel ... /> <FormControl /> <HelpBlock /> </FormGroup> </Form>'
 );
+
 
 //render
 ReactDom.render(

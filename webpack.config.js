@@ -26,7 +26,7 @@ var config = {
             {
                 test : /\.jsx?/,
                 include : SRC_DIR,
-                loader : 'babel-loader',
+                loader : ['babel-loader'],
                 exclude: /node_modules/
             },
             // scss
