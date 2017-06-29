@@ -5,30 +5,15 @@ body{
     padding:1rem;
     box-sizing: border-box;
 
-    .example-section{
-        border: 2px solid red;
-        margin-top: 20px;
-        padding: 10px;
-        box-sizing: border-box;
+    .flag-key{
+        font-weight:bold;
+        color: #999;
+    }
 
-        .example-section-title{
-            font-weight:bold;
-        }
-        .example-section-content{
-            margin-top:5px;
-        }
-
-        .flag-key{
-            font-weight:bold;
-            color: #999;
-        }
-
-        .flag-value{
-            font-weight:bold;
-            margin-left: 5px;
-            color: #999;
-        }
-
+    .flag-value{
+        font-weight:bold;
+        margin-left: 5px;
+        color: #999;
     }
 
     .some-margin{
