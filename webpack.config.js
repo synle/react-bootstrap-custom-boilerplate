@@ -44,11 +44,7 @@ var config = {
                 test : /\.jsx?/,
                 include : SRC_DIR,
                 loader : 'babel-loader',
-                exclude: /node_modules/,
-                query: {
-                    presets: ['es2015', 'react']
-                }
-
+                exclude: /node_modules/
             },
             // scss
             {
@@ -65,14 +61,7 @@ var config = {
                 }]
             }
         ]
-    },
-    // plugins: [
-    //     // will be put inside config.output.path... (defined above)
-    //     new ExtractTextPlugin('index.css')
-    // ],
-    // sassLoader: {
-    //     includePaths: [path.resolve(__dirname, "./node_modules")]
-    // }
+    }
 };
 
 module.exports = config;
