@@ -1,9 +1,14 @@
 var webpack = require('webpack');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var path = require('path');
 
+
+// configs
 var SRC_DIR = path.resolve(__dirname, 'src');
 var DEST_DIR = path.resolve(__dirname, 'public');
 
+
+// build steps
 var config = {
     entry: SRC_DIR + '/index.jsx',
     output: {
