@@ -47,22 +47,57 @@ const _getExampleDomList = () => {
 
 // example start here
 _pushExampleDom(
-    '<ButtonToolbar /> and <Button bsStyle />',
+    '<Button /> Styles and Sizes',
     (
-        <ButtonToolbar>
-            <Button>Default</Button>
-            <Button bsStyle="primary">primary</Button>
-            <Button bsStyle="success">success</Button>
-            <Button bsStyle="info">info</Button>
-            <Button bsStyle="warning">warning</Button>
-            <Button bsStyle="danger">danger</Button>
-            <Button bsStyle="link">link</Button>
-        </ButtonToolbar>
+        <table>
+            <tr className="some-padding">
+                <td></td>
+                <td><span className="flag-key">bsStyle</span><span className="flag-value">primary</span></td>
+                <td><span className="flag-key">bsStyle</span><span className="flag-value">success</span></td>
+                <td><span className="flag-key">bsStyle</span><span className="flag-value">info</span></td>
+                <td><span className="flag-key">bsStyle</span><span className="flag-value">warning</span></td>
+                <td><span className="flag-key">bsStyle</span><span className="flag-value">danger</span></td>
+                <td><span className="flag-key">bsStyle</span><span className="flag-value">link</span></td>
+            </tr>
+            <tr className="some-padding">
+                <td><span className="flag-key">bsSize</span><span className="flag-value">large</span></td>
+                <td><Button bsStyle="primary" bsSize="large">primary</Button></td>
+                <td><Button bsStyle="success" bsSize="large">success</Button></td>
+                <td><Button bsStyle="info" bsSize="large">info</Button></td>
+                <td><Button bsStyle="warning" bsSize="large">warning</Button></td>
+                <td><Button bsStyle="danger" bsSize="large">danger</Button></td>
+                <td><Button bsStyle="link" bsSize="large">link</Button></td>
+            </tr>
+            <tr className="some-padding">
+                <td><span className="flag-key">bsSize</span><span className="flag-value">DEFAULT</span></td>
+                <td><Button bsStyle="primary">primary</Button></td>
+                <td><Button bsStyle="success">success</Button></td>
+                <td><Button bsStyle="info">info</Button></td>
+                <td><Button bsStyle="warning">warning</Button></td>
+                <td><Button bsStyle="danger">danger</Button></td>
+                <td><Button bsStyle="link">link</Button></td>
+            </tr>
+            <tr className="some-padding">
+                <td><span className="flag-key">bsSize</span><span className="flag-value">small</span></td>
+                <td><Button bsStyle="primary" bsSize="small">primary</Button></td>
+                <td><Button bsStyle="success" bsSize="small">success</Button></td>
+                <td><Button bsStyle="info" bsSize="small">info</Button></td>
+                <td><Button bsStyle="warning" bsSize="small">warning</Button></td>
+                <td><Button bsStyle="danger" bsSize="small">danger</Button></td>
+                <td><Button bsStyle="link" bsSize="small">link</Button></td>
+            </tr>
+            <tr className="some-padding">
+                <td><span className="flag-key">bsSize</span><span className="flag-value">xsmall</span></td>
+                <td><Button bsStyle="primary" bsSize="xsmall">primary</Button></td>
+                <td><Button bsStyle="success" bsSize="xsmall">success</Button></td>
+                <td><Button bsStyle="info" bsSize="xsmall">info</Button></td>
+                <td><Button bsStyle="warning" bsSize="xsmall">warning</Button></td>
+                <td><Button bsStyle="danger" bsSize="xsmall">danger</Button></td>
+                <td><Button bsStyle="link" bsSize="xsmall">link</Button></td>
+            </tr>
+        </table>
     )
 )
-
-
-
 
 
 
