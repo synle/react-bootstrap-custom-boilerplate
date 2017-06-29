@@ -16,28 +16,6 @@ var config = {
         filename: 'index.js'
     },
     module : {
-        // loaders : [
-        //     // jsx (react)
-        //     {
-        //         test : /\.jsx?/,
-        //         include : SRC_DIR,
-        //         loader : 'babel-loader',
-        //         exclude: /node_modules/,
-        //         query: {
-        //             presets: ['es2015', 'react']
-        //         }
-
-        //     },
-        //     // scss
-        //     {
-        //         // Good doc for import node_modules
-        //         // https://github.com/AngularClass/angular-starter/issues/727
-        //         test: /\.scss$/,
-        //         loader: ExtractTextPlugin.extract('css-loader!sass-loader')
-        //         // use the following for inline style tag
-        //         // loaders: ['style-loader', 'css-loader', 'sass-loader']
-        //     }
-        // ],
         rules: [
             // jsx (react)
             {
@@ -49,19 +27,28 @@ var config = {
             // scss
             {
                 test: /\.scss$/,
-                use: [{
-                    loader: "style-loader"
-                }, {
-                    loader: "css-loader"
-                }, {
-                    loader: "sass-loader",
-                    options: {
-                        includePaths: ["node_modules"]
-                    }
-                }]
+                use: ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
+                    use: [
+                        {
+                            loader: "css-loader"
+                        },
+                        {
+                            loader: "sass-loader",
+                            options: {
+                                includePaths: ["node_modules"]
+                            }
+                        }
+                    ]
+                })
             }
         ]
-    }
+    },
+    plugins: [
+        // will be put inside config.output.path... (defined above)
+        // public/index.css (DEST_DIR/index.css)
+        new ExtractTextPlugin('index.css')
+    ]
 };
 
 module.exports = config;
