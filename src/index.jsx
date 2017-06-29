@@ -907,9 +907,14 @@ _pushExampleDom(
         <article>
             {
                 iconList.map( icon =>
-                    <Button key={icon} title={icon} onClick={() => alert(icon)}>
-                        <Glyphicon glyph={icon} />
-                    </Button>
+                    <div className="example-icon-wrapper" key={icon}>
+                        <Button className="some-margin">
+                            <Glyphicon glyph={icon} />
+                        </Button>
+                        <span>
+                            {icon}
+                        </span>
+                    </div>
                 )
             }
         </article>
