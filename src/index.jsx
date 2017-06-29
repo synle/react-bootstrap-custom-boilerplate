@@ -28,7 +28,7 @@ const buttonsInstance = (
 //render
 ReactDom.render(
     <div className="col-sm-12">
-        <div><h2>Simple Examples</h2></div>
+        <div><h2>Simple <b>BUTTONS</b> Examples</h2></div>
         <div>
             { buttonsInstance }
         </div>
