@@ -1,3 +1,7 @@
+// css code
+require('./index.scss');
+
+// js code
 import React from 'react';
 import ReactDom from 'react-dom';
 

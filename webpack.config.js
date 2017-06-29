@@ -12,10 +12,16 @@ var config = {
     },
     module : {
     loaders : [
+            // jsx (react)
             {
                 test : /\.jsx?/,
                 include : SRC_DIR,
                 loader : 'babel-loader'
+            },
+            // scss
+            {
+                test: /\.scss$/,
+                loaders: ['style-loader', 'css-loader', 'sass-loader']
             }
         ]
     }
