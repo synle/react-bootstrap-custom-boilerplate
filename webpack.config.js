@@ -17,6 +17,11 @@ var config = {
     },
     module : {
         rules: [
+            // binary files (fonts and svg...)
+            {
+                test: /\.woff2?$|\.ttf$|\.eot$|\.svg$/,
+                loader: "file-loader"
+            },
             // jsx (react)
             {
                 test : /\.jsx?/,
