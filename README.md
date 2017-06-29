@@ -34,6 +34,15 @@ Sass Files
 ```
 
 
+## Build Code
+```
+    npm install
+    npm run clean
+    npm run build
+
+    // open the sample page (only works on Mac)
+    npm run start
+```
 
 ## References
 Special thanks to the following folks who created awesome frameworks.

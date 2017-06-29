@@ -17,11 +17,16 @@ var config = {
     },
     module : {
         rules: [
+            // binary files (fonts and svg...)
+            {
+                test: /\.woff2?$|\.ttf$|\.eot$|\.svg$/,
+                loader: "file-loader"
+            },
             // jsx (react)
             {
                 test : /\.jsx?/,
                 include : SRC_DIR,
-                loader : 'babel-loader',
+                loader : ['babel-loader'],
                 exclude: /node_modules/
             },
             // scss
@@ -36,7 +41,9 @@ var config = {
                         {
                             loader: "sass-loader",
                             options: {
-                                includePaths: ["node_modules"]
+                                includePaths: [
+                                    path.resolve(__dirname, "node_modules")
+                                ]
                             }
                         }
                     ]
