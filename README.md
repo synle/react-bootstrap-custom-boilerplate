@@ -21,7 +21,14 @@ https://github.com/AngularClass/angular-starter/issues/727
 
 ## Things you need
 ```
+HTML
 <!DOCTYPE html>
+<html lang="en">
+  ...
+</html>
 
+
+
+Sass Files
 @import "stylesheets/base"; // this is the core thing, you need this for styling...
 ```
