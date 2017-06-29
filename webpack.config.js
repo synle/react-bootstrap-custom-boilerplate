@@ -19,8 +19,9 @@ var config = {
         loaders : [
             // jsx (react)
             {
-                test : /\.jsx?/,
+                test: /\.(js|jsx)$/,
                 include : SRC_DIR,
+                exclude: /node_modules/,
                 loader : 'babel-loader'
             },
             // scss
