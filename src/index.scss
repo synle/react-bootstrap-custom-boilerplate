@@ -1,8 +1,15 @@
-@import "stylesheets/base";
+@import "stylesheets/base"; // this is the core thing, you need this for styling...
 
 .example-section{
     border: 2px solid red;
     margin-top: 20px;
     padding: 10px;
     box-sizing: border-box;
+
+    .example-section-title{
+        font-weight:bold;
+    }
+    .example-section-content{
+        margin-top:5px;
+    }
 }
