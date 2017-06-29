@@ -58,12 +58,24 @@ const __getMenuItems = () => {
     ];
 };
 
-
+//////////////////////
+//////////////////////
 // example start here
+//////////////////////
+//////////////////////
+
+// _pushExampleDom(
+//     'Button',
+//     (
+//         <article></article>
+//     ),
+//     '<Button bsStyle="..." bsSize="..." [active|disabled]>Button Text</Button>'
+// )
+
 _pushExampleDom(
     'Button',
     (
-        <div>
+        <article>
             <h3>Button Sizes</h3>
             <table>
                 <tbody>
@@ -156,7 +168,7 @@ _pushExampleDom(
                 </tr>
                 </tbody>
             </table>
-        </div>
+        </article>
     ),
     '<Button bsStyle="..." bsSize="..." [active|disabled]>Button Text</Button>'
 )
@@ -165,7 +177,7 @@ _pushExampleDom(
 _pushExampleDom(
     'DropdownButton and SplitButton',
     (
-        <div>
+        <article>
             <table>
                 <tbody>
                 <tr>
@@ -246,7 +258,7 @@ _pushExampleDom(
                 </tr>
                 </tbody>
             </table>
-        </div>
+        </article>
     ),
     '<SplitButton bsStyle="..."  title="required" id="required">'
 );
@@ -257,7 +269,7 @@ _pushExampleDom(
 _pushExampleDom(
     'ListGroup',
     (
-        <div>
+        <article>
             <table>
                 <tbody>
                 <tr>
@@ -288,7 +300,7 @@ _pushExampleDom(
                 </tr>
                 </tbody>
             </table>
-        </div>
+        </article>
     ),
     '<ListGroup>    <ListGroupItem bsStyle="..." [active|disabled]>item 111</ListGroupItem>    </ListGroup>'
 );
@@ -309,7 +321,9 @@ const FieldGroup = function (params) {
 _pushExampleDom(
     'Forms',
     (
-        <form>
+        <article>
+            <h3>Basic Form Stuffs</h3>
+            <form>
             <FieldGroup
               id="formControlsText"
               type="text"
@@ -399,9 +413,221 @@ _pushExampleDom(
               Submit
             </Button>
           </form>
+
+
+          <h3>Validation State</h3>
+          <form>
+            <FormGroup controlId="formValidationSuccess1" validationState="success">
+              <ControlLabel>Input with success</ControlLabel>
+              <FormControl type="text" />
+              <HelpBlock>Help text with validation state.</HelpBlock>
+            </FormGroup>
+
+            <FormGroup controlId="formValidationWarning1" validationState="warning">
+              <ControlLabel>Input with warning</ControlLabel>
+              <FormControl type="text" />
+            </FormGroup>
+
+            <FormGroup controlId="formValidationError1" validationState="error">
+              <ControlLabel>Input with error</ControlLabel>
+              <FormControl type="text" />
+            </FormGroup>
+
+            <FormGroup controlId="formValidationNull" validationState={null}>
+              <ControlLabel>Input with no validation state</ControlLabel>
+              <FormControl type="text" />
+            </FormGroup>
+
+            <FormGroup controlId="formValidationSuccess2" validationState="success">
+              <ControlLabel>Input with success and feedback icon</ControlLabel>
+              <FormControl type="text" />
+              <FormControl.Feedback />
+            </FormGroup>
+
+            <FormGroup controlId="formValidationWarning2" validationState="warning">
+              <ControlLabel>Input with warning and feedback icon</ControlLabel>
+              <FormControl type="text" />
+              <FormControl.Feedback />
+            </FormGroup>
+
+            <FormGroup controlId="formValidationError2" validationState="error">
+              <ControlLabel>Input with error and feedback icon</ControlLabel>
+              <FormControl type="text" />
+              <FormControl.Feedback />
+            </FormGroup>
+
+            <FormGroup controlId="formValidationSuccess3" validationState="success">
+              <ControlLabel>Input with success and custom feedback icon</ControlLabel>
+              <FormControl type="text" />
+              <FormControl.Feedback>
+                <Glyphicon glyph="music" />
+              </FormControl.Feedback>
+            </FormGroup>
+
+            <FormGroup controlId="formValidationWarning3" validationState="warning">
+              <ControlLabel>Input group with warning</ControlLabel>
+              <InputGroup>
+                <InputGroup.Addon>@</InputGroup.Addon>
+                <FormControl type="text" />
+              </InputGroup>
+              <FormControl.Feedback />
+            </FormGroup>
+
+            <Form componentClass="fieldset" horizontal>
+              <FormGroup controlId="formValidationError3" validationState="error">
+                <Col componentClass={ControlLabel} xs={3}>
+                  Input with error
+                </Col>
+                <Col xs={9}>
+                  <FormControl type="text" />
+                  <FormControl.Feedback />
+                </Col>
+              </FormGroup>
+
+              <FormGroup controlId="formValidationSuccess4" validationState="success">
+                <Col componentClass={ControlLabel} xs={3}>
+                  Input group with success
+                </Col>
+                <Col xs={9}>
+                  <InputGroup>
+                    <InputGroup.Addon>@</InputGroup.Addon>
+                    <FormControl type="text" />
+                  </InputGroup>
+                  <FormControl.Feedback />
+                </Col>
+              </FormGroup>
+            </Form>
+
+            <Form componentClass="fieldset" inline>
+              <FormGroup controlId="formValidationWarning4" validationState="warning">
+                <ControlLabel>Input with warning</ControlLabel>
+                {' '}
+                <FormControl type="text" />
+                <FormControl.Feedback />
+              </FormGroup>
+              {' '}
+              <FormGroup controlId="formValidationError4" validationState="error">
+                <ControlLabel>Input group with error</ControlLabel>
+                {' '}
+                <InputGroup>
+                  <InputGroup.Addon>@</InputGroup.Addon>
+                  <FormControl type="text" />
+                </InputGroup>
+                <FormControl.Feedback />
+              </FormGroup>
+            </Form>
+
+            <Checkbox validationState="success">
+              Checkbox with success
+            </Checkbox>
+            <Radio validationState="warning">
+              Radio with warning
+            </Radio>
+            <Checkbox validationState="error">
+              Checkbox with error
+            </Checkbox>
+
+            {/* This requires React 15's <span>-less spaces to be exactly correct. */}
+            <FormGroup validationState="success">
+              <Checkbox inline>
+                Checkbox
+              </Checkbox>
+              {' '}
+              <Checkbox inline>
+                with
+              </Checkbox>
+              {' '}
+              <Checkbox inline>
+                success
+              </Checkbox>
+            </FormGroup>
+          </form>
+      </article>
     ),
     '<Form> <FormGroup> <ControlLabel ... /> <FormControl /> <HelpBlock /> </FormGroup> </Form>'
 );
+
+
+
+
+const _sampleImageUrl1 = "https://react-bootstrap.github.io/assets/thumbnail.png";
+const _sampleImageUrl2 = "https://react-bootstrap.github.io/assets/thumbnaildiv.png";
+
+_pushExampleDom(
+    'Images, Thumbnails',
+    (
+        <article>
+            <h3>Image Shapes</h3>
+            <Grid>
+                <Row>
+                  <Col md={4}>
+                    <Image src={_sampleImageUrl1} rounded />
+                  </Col>
+                  <Col md={4}>
+                    <Image src={_sampleImageUrl1} circle />
+                  </Col>
+                  <Col md={4}>
+                    <Image src={_sampleImageUrl1} thumbnail />
+                  </Col>
+                </Row>
+            </Grid>
+
+
+            <h3>Thumbnails</h3>
+            <Grid>
+              <Row>
+              <Col xs={6} md={3}>
+                <Thumbnail href="#" alt="171x180" src={_sampleImageUrl1} />
+              </Col>
+              <Col xs={6} md={3}>
+                <Thumbnail href="#" alt="171x180" src={_sampleImageUrl1} />
+              </Col>
+              <Col xs={6} md={3}>
+                <Thumbnail href="#" alt="171x180" src={_sampleImageUrl1} />
+              </Col>
+              </Row>
+            </Grid>
+
+
+            <h3>Thumbnails with Divider</h3>
+            <Grid>
+                <Row>
+                <Col md={4}>
+                  <Thumbnail src={_sampleImageUrl2} alt="242x200">
+                    <h3>Thumbnail label</h3>
+                    <p>Description</p>
+                    <p>
+                      <Button bsStyle="primary">Button</Button>&nbsp;
+                      <Button bsStyle="default">Button</Button>
+                    </p>
+                  </Thumbnail>
+                </Col>
+                <Col md={4}>
+                  <Thumbnail src={_sampleImageUrl2} alt="242x200">
+                    <h3>Thumbnail label</h3>
+                    <p>Description</p>
+                    <p>
+                      <Button bsStyle="primary">Button</Button>&nbsp;
+                      <Button bsStyle="default">Button</Button>
+                    </p>
+                  </Thumbnail>
+                </Col>
+                <Col md={4}>
+                  <Thumbnail src={_sampleImageUrl2} alt="242x200">
+                    <h3>Thumbnail label</h3>
+                    <p>Description</p>
+                    <p>
+                      <Button bsStyle="primary">Button</Button>&nbsp;
+                      <Button bsStyle="default">Button</Button>
+                    </p>
+                  </Thumbnail>
+                </Col>
+                </Row>
+              </Grid>
+        </article>
+    ),
+    '<Image src="..." alt="" /> or <Thumbnail src="..." alt="" />'
+)
 
 
 //render
