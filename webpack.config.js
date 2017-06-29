@@ -16,37 +16,55 @@ var config = {
         filename: 'index.js'
     },
     module : {
-        loaders : [
+        // loaders : [
+        //     // jsx (react)
+        //     {
+        //         test : /\.jsx?/,
+        //         include : SRC_DIR,
+        //         loader : 'babel-loader',
+        //         exclude: /node_modules/,
+        //         query: {
+        //             presets: ['es2015', 'react']
+        //         }
+
+        //     },
+        //     // scss
+        //     {
+        //         // Good doc for import node_modules
+        //         // https://github.com/AngularClass/angular-starter/issues/727
+        //         test: /\.scss$/,
+        //         loader: ExtractTextPlugin.extract('css-loader!sass-loader')
+        //         // use the following for inline style tag
+        //         // loaders: ['style-loader', 'css-loader', 'sass-loader']
+        //     }
+        // ],
+        rules: [
             // jsx (react)
             {
-                test: /\.jsx$/,
+                test : /\.jsx?/,
                 include : SRC_DIR,
-                // exclude: /node_modules/,
-                loader : 'babel-loader'
+                loader : 'babel-loader',
+                exclude: /node_modules/,
+                query: {
+                    presets: ['es2015', 'react']
+                }
+
             },
             // scss
             {
-                // Good doc for import node_modules
-                // https://github.com/AngularClass/angular-starter/issues/727
                 test: /\.scss$/,
-                loader: ExtractTextPlugin.extract('css-loader!sass-loader')
-                // use the following for inline style tag
-                // loaders: ['style-loader', 'css-loader', 'sass-loader']
+                use: [{
+                    loader: "style-loader"
+                }, {
+                    loader: "css-loader"
+                }, {
+                    loader: "sass-loader",
+                    options: {
+                        includePaths: ["node_modules"]
+                    }
+                }]
             }
-        ],
-        rules: [{
-            test: /\.scss$/,
-            use: [{
-                loader: "style-loader"
-            }, {
-                loader: "css-loader"
-            }, {
-                loader: "sass-loader",
-                options: {
-                    includePaths: ["node_modules"]
-                }
-            }]
-        }]
+        ]
     },
     // plugins: [
     //     // will be put inside config.output.path... (defined above)
