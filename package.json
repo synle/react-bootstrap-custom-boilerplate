@@ -1,0 +1,19 @@
+{
+  "name": "react-bootstrap-custom-boilerplate",
+  "version": "1.0.0",
+  "description": "boilder plate to play with bootstrap customization (react bootstrap)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/synle/react-bootstrap-custom-boilerplate.git"
+  },
+  "author": "Sy Le",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/synle/react-bootstrap-custom-boilerplate/issues"
+  },
+  "homepage": "https://github.com/synle/react-bootstrap-custom-boilerplate#readme"
+}
