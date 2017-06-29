@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/synle/react-bootstrap-custom-boilerplate/issues"
   },
-  "homepage": "https://github.com/synle/react-bootstrap-custom-boilerplate#readme"
+  "homepage": "https://github.com/synle/react-bootstrap-custom-boilerplate#readme",
+  "dependencies": {
+    "webpack": "^3.0.0"
+  }
 }
