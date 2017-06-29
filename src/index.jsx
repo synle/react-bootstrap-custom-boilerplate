@@ -69,15 +69,15 @@ _pushExampleDom(
                 <tbody>
                 <tr>
                     <td className="some-padding"></td>
-                    <td className="some-padding"><span className="flag-key">bsStyle</span><span className="flag-value">primary</span></td>
-                    <td className="some-padding"><span className="flag-key">bsStyle</span><span className="flag-value">success</span></td>
-                    <td className="some-padding"><span className="flag-key">bsStyle</span><span className="flag-value">info</span></td>
-                    <td className="some-padding"><span className="flag-key">bsStyle</span><span className="flag-value">warning</span></td>
-                    <td className="some-padding"><span className="flag-key">bsStyle</span><span className="flag-value">danger</span></td>
-                    <td className="some-padding"><span className="flag-key">bsStyle</span><span className="flag-value">link</span></td>
+                    <td className="some-padding"><Badge>bsStyle</Badge><span className="flag-value">primary</span></td>
+                    <td className="some-padding"><Badge>bsStyle</Badge><span className="flag-value">success</span></td>
+                    <td className="some-padding"><Badge>bsStyle</Badge><span className="flag-value">info</span></td>
+                    <td className="some-padding"><Badge>bsStyle</Badge><span className="flag-value">warning</span></td>
+                    <td className="some-padding"><Badge>bsStyle</Badge><span className="flag-value">danger</span></td>
+                    <td className="some-padding"><Badge>bsStyle</Badge><span className="flag-value">link</span></td>
                 </tr>
                 <tr>
-                    <td className="some-padding"><span className="flag-key">bsSize</span><span className="flag-value">large</span></td>
+                    <td className="some-padding"><Badge>bsSize</Badge><span className="flag-value">large</span></td>
                     <td className="some-padding"><Button bsStyle="primary" bsSize="large">primary</Button></td>
                     <td className="some-padding"><Button bsStyle="success" bsSize="large">success</Button></td>
                     <td className="some-padding"><Button bsStyle="info" bsSize="large">info</Button></td>
@@ -86,7 +86,7 @@ _pushExampleDom(
                     <td className="some-padding"><Button bsStyle="link" bsSize="large">link</Button></td>
                 </tr>
                 <tr>
-                    <td className="some-padding"><span className="flag-key">bsSize</span><span className="flag-value">DEFAULT</span></td>
+                    <td className="some-padding"><Badge>bsSize</Badge><span className="flag-value">DEFAULT</span></td>
                     <td className="some-padding"><Button bsStyle="primary">primary</Button></td>
                     <td className="some-padding"><Button bsStyle="success">success</Button></td>
                     <td className="some-padding"><Button bsStyle="info">info</Button></td>
@@ -95,7 +95,7 @@ _pushExampleDom(
                     <td className="some-padding"><Button bsStyle="link">link</Button></td>
                 </tr>
                 <tr>
-                    <td className="some-padding"><span className="flag-key">bsSize</span><span className="flag-value">small</span></td>
+                    <td className="some-padding"><Badge>bsSize</Badge><span className="flag-value">small</span></td>
                     <td className="some-padding"><Button bsStyle="primary" bsSize="small">primary</Button></td>
                     <td className="some-padding"><Button bsStyle="success" bsSize="small">success</Button></td>
                     <td className="some-padding"><Button bsStyle="info" bsSize="small">info</Button></td>
@@ -104,7 +104,7 @@ _pushExampleDom(
                     <td className="some-padding"><Button bsStyle="link" bsSize="small">link</Button></td>
                 </tr>
                 <tr>
-                    <td className="some-padding"><span className="flag-key">bsSize</span><span className="flag-value">xsmall</span></td>
+                    <td className="some-padding"><Badge>bsSize</Badge><span className="flag-value">xsmall</span></td>
                     <td className="some-padding"><Button bsStyle="primary" bsSize="xsmall">primary</Button></td>
                     <td className="some-padding"><Button bsStyle="success" bsSize="xsmall">success</Button></td>
                     <td className="some-padding"><Button bsStyle="info" bsSize="xsmall">info</Button></td>
@@ -120,15 +120,15 @@ _pushExampleDom(
                 <tbody>
                 <tr>
                     <td className="some-padding"></td>
-                    <td className="some-padding"><span className="flag-key">bsStyle</span><span className="flag-value">primary</span></td>
-                    <td className="some-padding"><span className="flag-key">bsStyle</span><span className="flag-value">success</span></td>
-                    <td className="some-padding"><span className="flag-key">bsStyle</span><span className="flag-value">info</span></td>
-                    <td className="some-padding"><span className="flag-key">bsStyle</span><span className="flag-value">warning</span></td>
-                    <td className="some-padding"><span className="flag-key">bsStyle</span><span className="flag-value">danger</span></td>
-                    <td className="some-padding"><span className="flag-key">bsStyle</span><span className="flag-value">link</span></td>
+                    <td className="some-padding"><Badge>bsStyle</Badge><span className="flag-value">primary</span></td>
+                    <td className="some-padding"><Badge>bsStyle</Badge><span className="flag-value">success</span></td>
+                    <td className="some-padding"><Badge>bsStyle</Badge><span className="flag-value">info</span></td>
+                    <td className="some-padding"><Badge>bsStyle</Badge><span className="flag-value">warning</span></td>
+                    <td className="some-padding"><Badge>bsStyle</Badge><span className="flag-value">danger</span></td>
+                    <td className="some-padding"><Badge>bsStyle</Badge><span className="flag-value">link</span></td>
                 </tr>
                 <tr>
-                    <td className="some-padding"><span className="flag-key">DEFAULT</span></td>
+                    <td className="some-padding"><Badge>DEFAULT</Badge></td>
                     <td className="some-padding"><Button bsStyle="primary" bsSize="large">primary</Button></td>
                     <td className="some-padding"><Button bsStyle="success" bsSize="large">success</Button></td>
                     <td className="some-padding"><Button bsStyle="info" bsSize="large">info</Button></td>
@@ -137,7 +137,7 @@ _pushExampleDom(
                     <td className="some-padding"><Button bsStyle="link" bsSize="large">link</Button></td>
                 </tr>
                 <tr>
-                    <td className="some-padding"><span className="flag-key">active</span></td>
+                    <td className="some-padding"><Badge>active</Badge></td>
                     <td className="some-padding"><Button bsStyle="primary" active>primary</Button></td>
                     <td className="some-padding"><Button bsStyle="success" active>success</Button></td>
                     <td className="some-padding"><Button bsStyle="info" active>info</Button></td>
@@ -146,7 +146,7 @@ _pushExampleDom(
                     <td className="some-padding"><Button bsStyle="link" active>link</Button></td>
                 </tr>
                 <tr>
-                    <td className="some-padding"><span className="flag-key">disabled</span></td>
+                    <td className="some-padding"><Badge>disabled</Badge></td>
                     <td className="some-padding"><Button bsStyle="primary" bsSize="small" disabled>primary</Button></td>
                     <td className="some-padding"><Button bsStyle="success" bsSize="small" disabled>success</Button></td>
                     <td className="some-padding"><Button bsStyle="info" bsSize="small" disabled>info</Button></td>
@@ -170,15 +170,15 @@ _pushExampleDom(
                 <tbody>
                 <tr>
                     <td className="some-padding"></td>
-                    <td className="some-padding"><span className="flag-key">bsStyle</span><span className="flag-value">primary</span></td>
-                    <td className="some-padding"><span className="flag-key">bsStyle</span><span className="flag-value">success</span></td>
-                    <td className="some-padding"><span className="flag-key">bsStyle</span><span className="flag-value">info</span></td>
-                    <td className="some-padding"><span className="flag-key">bsStyle</span><span className="flag-value">warning</span></td>
-                    <td className="some-padding"><span className="flag-key">bsStyle</span><span className="flag-value">danger</span></td>
-                    <td className="some-padding"><span className="flag-key">bsStyle</span><span className="flag-value">link</span></td>
+                    <td className="some-padding"><Badge>bsStyle</Badge><span className="flag-value">primary</span></td>
+                    <td className="some-padding"><Badge>bsStyle</Badge><span className="flag-value">success</span></td>
+                    <td className="some-padding"><Badge>bsStyle</Badge><span className="flag-value">info</span></td>
+                    <td className="some-padding"><Badge>bsStyle</Badge><span className="flag-value">warning</span></td>
+                    <td className="some-padding"><Badge>bsStyle</Badge><span className="flag-value">danger</span></td>
+                    <td className="some-padding"><Badge>bsStyle</Badge><span className="flag-value">link</span></td>
                 </tr>
                 <tr>
-                    <td className="some-padding"><span className="flag-key">SplitButton</span></td>
+                    <td className="some-padding"><Badge>SplitButton</Badge></td>
                     <td className="some-padding">
                         <SplitButton bsStyle="primary" title="primary" id="dropdown-exp1-primary">
                             { __getMenuItems() }
@@ -212,7 +212,7 @@ _pushExampleDom(
                 </tr>
 
                 <tr>
-                    <td className="some-padding"><span className="flag-key">DropdownButton</span></td>
+                    <td className="some-padding"><Badge>DropdownButton</Badge></td>
                     <td className="some-padding">
                         <DropdownButton bsStyle="primary" title="primary" id="dropdown-exp2-primary">
                             { __getMenuItems() }
@@ -248,7 +248,7 @@ _pushExampleDom(
             </table>
         </div>
     ),
-    '<SplitButton bsStyle="..."  title="..." id="required">'
+    '<SplitButton bsStyle="..."  title="required" id="required">'
 )
 
 
@@ -258,25 +258,39 @@ _pushExampleDom(
     'ListGroup',
     (
         <div>
-            <h3>active, DEFAULT, disabled</h3>
-            <ListGroup>
-                <ListGroupItem>DEFAULT</ListGroupItem>
-                <ListGroupItem active>active</ListGroupItem>
-                <ListGroupItem disabled>disabled</ListGroupItem>
-            </ListGroup>
-
-
-            <h3>bsStyle</h3>
-            <ListGroup>
-                <ListGroupItem>DEFAULT</ListGroupItem>
-                <ListGroupItem bsStyle="success">success</ListGroupItem>
-                <ListGroupItem bsStyle="info">info</ListGroupItem>
-                <ListGroupItem bsStyle="warning">warning</ListGroupItem>
-                <ListGroupItem bsStyle="danger">danger</ListGroupItem>
-            </ListGroup>
+            <table>
+                <tbody>
+                <tr>
+                    <td className="some-padding">
+                        <Badge>active</Badge>, <Badge>disabled</Badge>
+                    </td>
+                    <td className="some-padding">
+                        <Badge>bsStyle</Badge>
+                    </td>
+                </tr>
+                <tr>
+                    <td className="some-padding">
+                        <ListGroup>
+                            <ListGroupItem>DEFAULT</ListGroupItem>
+                            <ListGroupItem active>active</ListGroupItem>
+                            <ListGroupItem disabled>disabled</ListGroupItem>
+                        </ListGroup>
+                    </td>
+                    <td className="some-padding">
+                        <ListGroup>
+                            <ListGroupItem>DEFAULT</ListGroupItem>
+                            <ListGroupItem bsStyle="success">success</ListGroupItem>
+                            <ListGroupItem bsStyle="info">info</ListGroupItem>
+                            <ListGroupItem bsStyle="warning">warning</ListGroupItem>
+                            <ListGroupItem bsStyle="danger">danger</ListGroupItem>
+                        </ListGroup>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
         </div>
     ),
-    '<ListGroup><ListGroupItem>item 111</ListGroupItem></ListGroup>'
+    '<ListGroup>    <ListGroupItem bsStyle="..." [active|disabled]>item 111</ListGroupItem>    </ListGroup>'
 )
 
 //render
