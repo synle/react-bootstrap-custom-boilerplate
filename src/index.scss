@@ -1,35 +1,42 @@
 @import "stylesheets/base"; // this is the core thing, you need this for styling...
 
-.example-section{
-    border: 2px solid red;
-    margin-top: 20px;
-    padding: 10px;
+
+body{
+    padding:1rem;
     box-sizing: border-box;
 
-    .example-section-title{
-        font-weight:bold;
+    .example-section{
+        border: 2px solid red;
+        margin-top: 20px;
+        padding: 10px;
+        box-sizing: border-box;
+
+        .example-section-title{
+            font-weight:bold;
+        }
+        .example-section-content{
+            margin-top:5px;
+        }
+
+        .flag-key{
+            font-weight:bold;
+            color: #999;
+        }
+
+        .flag-value{
+            font-weight:bold;
+            margin-left: 5px;
+            color: #999;
+        }
+
     }
-    .example-section-content{
-        margin-top:5px;
+
+    .some-margin{
+        margin:10px;
     }
 
-    .flag-key{
-        font-weight:bold;
-        color: #999;
+    .some-padding{
+        padding:10px;
     }
 
-    .flag-value{
-        font-weight:bold;
-        margin-left: 5px;
-        color: #999;
-    }
-
-}
-
-tr.some-margin td, .some-margin{
-    margin:10px;
-}
-
-tr.some-padding td, .some-padding{
-    padding:10px;
 }
