@@ -17,3 +17,11 @@ https://www.codementor.io/tamizhvendan/beginner-guide-setup-reactjs-environment-
 https://www.jonathan-petitcolas.com/2015/05/15/howto-setup-webpack-on-es6-react-application-with-sass.html
 
 https://github.com/AngularClass/angular-starter/issues/727
+
+
+## Things you need
+```
+<!DOCTYPE html>
+
+@import "stylesheets/base"; // this is the core thing, you need this for styling...
+```

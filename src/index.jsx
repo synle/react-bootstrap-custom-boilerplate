@@ -249,6 +249,38 @@ _pushExampleDom(
 
 
 
+
+_pushExampleDom(
+    '<ListGroup /> Sizes',
+    (
+        <div>
+            <ListGroup>
+                <ListGroupItem>Item 1</ListGroupItem>
+                <ListGroupItem>Item 2</ListGroupItem>
+                <ListGroupItem>...</ListGroupItem>
+            </ListGroup>
+
+
+            <div>active, DEFAULT, disabled</div>
+            <ListGroup>
+                <ListGroupItem>DEFAULT</ListGroupItem>
+                <ListGroupItem active>active</ListGroupItem>
+                <ListGroupItem disabled>disabled</ListGroupItem>
+            </ListGroup>
+
+
+            <div>bsStyle</div>
+            <ListGroup>
+                <ListGroupItem>DEFAULT</ListGroupItem>
+                <ListGroupItem bsStyle="success">success</ListGroupItem>
+                <ListGroupItem bsStyle="info">info</ListGroupItem>
+                <ListGroupItem bsStyle="warning">warning</ListGroupItem>
+                <ListGroupItem bsStyle="danger">danger</ListGroupItem>
+            </ListGroup>
+        </div>
+    )
+)
+
 //render
 ReactDom.render(
     <div>
