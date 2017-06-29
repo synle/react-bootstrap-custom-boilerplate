@@ -19,24 +19,42 @@ var config = {
         loaders : [
             // jsx (react)
             {
-                test: /\.(js|jsx)$/,
+                test: /\.jsx$/,
                 include : SRC_DIR,
-                exclude: /node_modules/,
+                // exclude: /node_modules/,
                 loader : 'babel-loader'
             },
             // scss
             {
+                // Good doc for import node_modules
+                // https://github.com/AngularClass/angular-starter/issues/727
                 test: /\.scss$/,
                 loader: ExtractTextPlugin.extract('css-loader!sass-loader')
                 // use the following for inline style tag
                 // loaders: ['style-loader', 'css-loader', 'sass-loader']
             }
-        ]
+        ],
+        rules: [{
+            test: /\.scss$/,
+            use: [{
+                loader: "style-loader"
+            }, {
+                loader: "css-loader"
+            }, {
+                loader: "sass-loader",
+                options: {
+                    includePaths: ["node_modules"]
+                }
+            }]
+        }]
     },
-    plugins: [
-        // will be put inside config.output.path... (defined above)
-        new ExtractTextPlugin('index.css')
-    ]
+    // plugins: [
+    //     // will be put inside config.output.path... (defined above)
+    //     new ExtractTextPlugin('index.css')
+    // ],
+    // sassLoader: {
+    //     includePaths: [path.resolve(__dirname, "./node_modules")]
+    // }
 };
 
 module.exports = config;
