@@ -16,7 +16,7 @@ var config = {
         filename: 'index.js'
     },
     module : {
-    loaders : [
+        loaders : [
             // jsx (react)
             {
                 test : /\.jsx?/,
@@ -26,11 +26,16 @@ var config = {
             // scss
             {
                 test: /\.scss$/,
-                loaders: ['style-loader', 'css-loader', 'sass-loader']
+                loader: ExtractTextPlugin.extract('css-loader!sass-loader')
+                // use the following for inline style tag
+                // loaders: ['style-loader', 'css-loader', 'sass-loader']
             }
         ]
-    }
-
+    },
+    plugins: [
+        // will be put inside config.output.path... (defined above)
+        new ExtractTextPlugin('index.css')
+    ]
 };
 
 module.exports = config;
