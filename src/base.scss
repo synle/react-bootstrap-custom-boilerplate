@@ -2,8 +2,12 @@
 
 
 // Core variables and mixins
-@import "~bootstrap-sass/assets/stylesheets/bootstrap/variables";
-@import "~bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+// import from lib (current folder)
+@import "lib/variables";
+@import "lib/mixins";
+// import from bootstrap sass
+// @import "~bootstrap-sass/assets/stylesheets/bootstrap/variables";
+// @import "~bootstrap-sass/assets/stylesheets/bootstrap/mixins";
 
 // Reset and dependencies
 @import "~bootstrap-sass/assets/stylesheets/bootstrap/normalize";
