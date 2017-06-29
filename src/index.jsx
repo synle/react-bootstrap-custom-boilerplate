@@ -15,22 +15,26 @@ const mountNode = document.getElementById('app-container');
 let exampleDoms = [];
 
 // function to get the dom...
-const _getExampleDom = (elmTitle, elmContent) => {
+const _getExampleDom = (elmTitle, elmContent, elmSnippet) => {
     return (
-        <div className="example-section">
-            <div className="example-section-title">{elmTitle}</div>
-            <div className="example-section-content">
-                {elmContent}
-            </div>
-        </div>
+        <Panel header={elmTitle} footer={elmSnippet}>
+            {elmContent}
+        </Panel>
+//        <div className="example-section">
+//            <div className="example-section-title">{elmTitle}</div>
+//            <div className="example-section-content">
+//                {elmContent}
+//            </div>
+//        </div>
     );
 }
 
-const _pushExampleDom = (elmTitle, elmContent) => {
+const _pushExampleDom = (elmTitle, elmContent, elmSnippet) => {
     exampleDoms.push(
         _getExampleDom(
             elmTitle,
-            elmContent
+            elmContent,
+            elmSnippet
         )
     );
 }
@@ -108,7 +112,8 @@ _pushExampleDom(
             </tr>
             </tbody>
         </table>
-    )
+    ),
+    '<Button bsStyle="..." bsSize="...">Button Text</Button>'
 )
 
 
@@ -156,7 +161,8 @@ _pushExampleDom(
             </tr>
             </tbody>
         </table>
-    )
+    ),
+    '<Button [active|disabled]>Button Text</Button>'
 )
 
 
@@ -178,32 +184,32 @@ _pushExampleDom(
             <tr>
                 <td className="some-padding"><span className="flag-key">SplitButton</span></td>
                 <td className="some-padding">
-                    <SplitButton bsStyle='primary' title='primary' id="dropdown-exp1-primary">
+                    <SplitButton bsStyle="primary" title="primary" id="dropdown-exp1-primary">
                         { __getMenuItems() }
                     </SplitButton>
                 </td>
                 <td className="some-padding">
-                    <SplitButton bsStyle='success' title='success' id="dropdown-exp1-success">
+                    <SplitButton bsStyle="success" title="success" id="dropdown-exp1-success">
                         { __getMenuItems() }
                     </SplitButton>
                 </td>
                 <td className="some-padding">
-                    <SplitButton bsStyle='info' title='info' id="dropdown-exp1-info">
+                    <SplitButton bsStyle="info" title="info" id="dropdown-exp1-info">
                         { __getMenuItems() }
                     </SplitButton>
                 </td>
                 <td className="some-padding">
-                    <SplitButton bsStyle='warning' title='warning' id="dropdown-exp1-warning">
+                    <SplitButton bsStyle="warning" title="warning" id="dropdown-exp1-warning">
                         { __getMenuItems() }
                     </SplitButton>
                 </td>
                 <td className="some-padding">
-                    <SplitButton bsStyle='danger' title='danger' id="dropdown-exp1-danger">
+                    <SplitButton bsStyle="danger" title="danger" id="dropdown-exp1-danger">
                         { __getMenuItems() }
                     </SplitButton>
                 </td>
                 <td className="some-padding">
-                    <SplitButton bsStyle='link' title='link' id="dropdown-exp1-link">
+                    <SplitButton bsStyle="link" title="link" id="dropdown-exp1-link">
                         { __getMenuItems() }
                     </SplitButton>
                 </td>
@@ -212,39 +218,40 @@ _pushExampleDom(
             <tr>
                 <td className="some-padding"><span className="flag-key">DropdownButton</span></td>
                 <td className="some-padding">
-                    <DropdownButton bsStyle='primary' title='primary' id="dropdown-exp2-primary">
+                    <DropdownButton bsStyle="primary" title="primary" id="dropdown-exp2-primary">
                         { __getMenuItems() }
                     </DropdownButton>
                 </td>
                 <td className="some-padding">
-                    <DropdownButton bsStyle='success' title='success' id="dropdown-exp2-success">
+                    <DropdownButton bsStyle="success" title="success" id="dropdown-exp2-success">
                         { __getMenuItems() }
                     </DropdownButton>
                 </td>
                 <td className="some-padding">
-                    <DropdownButton bsStyle='info' title='info' id="dropdown-exp2-info">
+                    <DropdownButton bsStyle="info" title="info" id="dropdown-exp2-info">
                         { __getMenuItems() }
                     </DropdownButton>
                 </td>
                 <td className="some-padding">
-                    <DropdownButton bsStyle='warning' title='warning' id="dropdown-exp2-warning">
+                    <DropdownButton bsStyle="warning" title="warning" id="dropdown-exp2-warning">
                         { __getMenuItems() }
                     </DropdownButton>
                 </td>
                 <td className="some-padding">
-                    <DropdownButton bsStyle='danger' title='danger' id="dropdown-exp2-danger">
+                    <DropdownButton bsStyle="danger" title="danger" id="dropdown-exp2-danger">
                         { __getMenuItems() }
                     </DropdownButton>
                 </td>
                 <td className="some-padding">
-                    <DropdownButton bsStyle='link' title='link' id="dropdown-exp2-link">
+                    <DropdownButton bsStyle="link" title="link" id="dropdown-exp2-link">
                         { __getMenuItems() }
                     </DropdownButton>
                 </td>
             </tr>
             </tbody>
         </table>
-    )
+    ),
+    '<SplitButton bsStyle="..."  title="..." id="required">'
 )
 
 
@@ -278,7 +285,8 @@ _pushExampleDom(
                 <ListGroupItem bsStyle="danger">danger</ListGroupItem>
             </ListGroup>
         </div>
-    )
+    ),
+    '<ListGroup><ListGroupItem>item 111</ListGroupItem></ListGroup>'
 )
 
 //render
