@@ -58,7 +58,7 @@ var config = {
     plugins: [
         // will be put inside config.output.path... (defined above)
         // public/index.css (DEST_DIR/index.css)
-        new ExtractTextPlugin('index.css')
+        new ExtractTextPlugin('page-guide.css')
     ]
 };
 

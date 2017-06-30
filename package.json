@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
-    "start": "mkdir -p public && cp -rf src/*.html public && open public/page*.html",
-    "clean": "rm -rf public",
+    "start": "mkdir -p dist && cp -rf src/*.html dist && open dist/page*.html",
+    "clean": "rm -rf dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
