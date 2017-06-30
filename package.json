@@ -4,9 +4,9 @@
   "description": "boilder plate to play with bootstrap customization (react bootstrap)",
   "main": "index.js",
   "scripts": {
-    "build": "cp src/*.html public && webpack",
-    "start": "open public/index.html",
-    "clean": "rm -rf public/*",
+    "build": "webpack",
+    "start": "mkdir -p public && cp -rf src/*.html public && open public/page*.html",
+    "clean": "rm -rf public",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
