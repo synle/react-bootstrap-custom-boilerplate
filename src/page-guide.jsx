@@ -5,6 +5,8 @@ require('./page-guide.scss'); // extra scss for the tutorial
 // js code
 import React from 'react';
 import ReactDom from 'react-dom';
+const createReactClass = React.createClass;
+
 
 import { Accordion, Alert, Badge, Breadcrumb, BreadcrumbItem, Button, ButtonGroup, ButtonToolbar, Carousel, CarouselItem, Checkbox, Clearfix, CloseButton, ControlLabel, Col, Collapse, Dropdown, DropdownButton, Fade, Form, FormControl, FormGroup, Glyphicon, Grid, HelpBlock, Image, InputGroup, Jumbotron, Label, ListGroup, ListGroupItem, Media, MenuItem, Modal, ModalBody, ModalFooter, ModalHeader, ModalTitle, Nav, Navbar, NavbarBrand, NavDropdown, NavItem, Overlay, OverlayTrigger, PageHeader, PageItem, Pager, Pagination, PaginationButton, Panel, PanelGroup, Popover, ProgressBar, Radio, ResponsiveEmbed, Row, SafeAnchor, SplitButton, Tab, TabContainer, TabContent, Table, TabPane, Tabs, Thumbnail, Tooltip, Well } from 'react-bootstrap';
 
@@ -920,7 +922,7 @@ _pushExampleDom(
 
 
 // modal examples
-const ExampleModal = React.createClass({
+const ExampleModal = createReactClass({
   getInitialState() {
     return { showModal: false };
   },
@@ -1004,35 +1006,93 @@ _pushExampleDom(
 
 
 //popover
-const popoverLeft = <Popover id="popover-positioned-left" title="Popover left">lorum ipsum lorum ipsum</Popover>;
-const popoverTop = <Popover id="popover-positioned-top" title="Popover top">lorum ipsum lorum ipsum</Popover>;
-const popoverBottom = <Popover id="popover-positioned-bottom" title="Popover bottom">lorum ipsum lorum ipsum</Popover>;
-const popoverRight = <Popover id="popover-positioned-right" title="Popover right">lorum ipsum lorum ipsum</Popover>;
-
-const ExamplePopover = (
-    <ButtonToolbar>
-        <OverlayTrigger trigger='hover'  placement="left" overlay={popoverLeft}>
-          <Button>left PopOver!</Button>
-        </OverlayTrigger>
-        <OverlayTrigger trigger='hover'  placement="top" overlay={popoverTop}>
-          <Button>top PopOver!</Button>
-        </OverlayTrigger>
-        <OverlayTrigger trigger='hover'  placement="bottom" overlay={popoverBottom}>
-          <Button>bottom PopOver!</Button>
-        </OverlayTrigger>
-        <OverlayTrigger trigger='hover'  placement="right" overlay={popoverRight}>
-          <Button>right PopOver!</Button>
-        </OverlayTrigger>
-    </ButtonToolbar>
+const popoverLeft = (
+  <Popover id="popover-positioned-left" title="Popover left">
+    left tooltip
+  </Popover>
 );
+
+const popoverTop = (
+  <Popover id="popover-positioned-top" title="Popover top">
+    top tooltip
+  </Popover>
+);
+
+const popoverBottom = (
+  <Popover id="popover-positioned-bottom" title="Popover bottom">
+    bottom tooltip
+  </Popover>
+);
+
+const popoverRight = (
+  <Popover id="popover-positioned-right" title="Popover right">
+    right tooltip
+  </Popover>
+);
+const ExampleTooltip = createReactClass({
+  getInitialState() {
+    return { show: true };
+  },
+
+  toggle() {
+    this.setState({ show: !this.state.show });
+  },
+
+  render() {
+    const sharedProps = {
+      show: this.state.show,
+      container: this,
+      target: () => ReactDom.findDOMNode(this.refs.target)
+    };
+
+    return (
+      <div style={{ height: 100, paddingLeft: 150, position: 'relative' }}>
+        <Button ref="target" onClick={this.toggle}>
+          Click me!
+        </Button>
+
+        <Overlay {...sharedProps} placement="left">
+          <Tooltip id="overload-left">left Tooltip</Tooltip>
+        </Overlay>
+        <Overlay {...sharedProps} placement="top">
+          <Tooltip id="overload-top">top Tooltip</Tooltip>
+        </Overlay>
+        <Overlay {...sharedProps} placement="right">
+          <Tooltip id="overload-right">right Tooltip</Tooltip>
+        </Overlay>
+        <Overlay {...sharedProps} placement="bottom">
+          <Tooltip id="overload-bottom">bottom Tooltip</Tooltip>
+        </Overlay>
+      </div>
+    );
+  }
+});
+
 _pushExampleDom(
     'Popover (tooltip)',
     (
         <article>
-            <ExamplePopover />
+            <h3>Tooltip</h3>
+            <ExampleTooltip />
+
+            <h3>Popover</h3>
+            <ButtonToolbar>
+                <OverlayTrigger trigger={['hover', 'focus']} placement="left" overlay={popoverLeft}>
+                  <Button>left Popover on Hover</Button>
+                </OverlayTrigger>
+                <OverlayTrigger trigger={['hover', 'focus']} placement="top" overlay={popoverTop}>
+                  <Button>top Popover on Hover</Button>
+                </OverlayTrigger>
+                <OverlayTrigger trigger={['hover', 'focus']} placement="bottom" overlay={popoverBottom}>
+                  <Button>bottom Popover on Hover</Button>
+                </OverlayTrigger>
+                <OverlayTrigger trigger={['hover', 'focus']} placement="right" overlay={popoverRight}>
+                  <Button>right Popover on Hover</Button>
+                </OverlayTrigger>
+            </ButtonToolbar>
         </article>
     ),
-    '<OverlayTrigger trigger="hover|focus|click" placement="left" overlay={popoverLeft}></OverlayTrigger>'
+    '<OverlayTrigger trigger="hover|focus|click" placement="left" overlay={popoverLeft}>    <Button>Holy guacamole!</Button>    </OverlayTrigger>'
 )
 
 
