@@ -10,10 +10,14 @@ var DEST_DIR = path.resolve(__dirname, 'dist');
 
 // build steps
 var config = {
-    entry: SRC_DIR + '/page-guide.jsx',
+    entry: {
+        //[name] => entry
+        'page-guide': SRC_DIR + '/page-guide.jsx', // tutorial page
+        'index': SRC_DIR + '/index.jsx' // main bundle
+    },
     output: {
         path: DEST_DIR,
-        filename: 'page-guide.js'
+        filename: "[name].js" // page-guide.js
     },
     module : {
         rules: [
@@ -58,7 +62,7 @@ var config = {
     plugins: [
         // will be put inside config.output.path... (defined above)
         // public/index.css (DEST_DIR/index.css)
-        new ExtractTextPlugin('page-guide.css')
+        new ExtractTextPlugin('[name].css')
     ]
 };
 
