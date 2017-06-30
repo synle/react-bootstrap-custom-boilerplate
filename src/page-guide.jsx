@@ -998,6 +998,54 @@ _pushExampleDom(
     '<Modal show={this.state.showModal} onHide={this.close}> ... </Modal>'
 )
 
+
+
+
+
+
+//popover
+const popoverLeft = <Popover id="popover-positioned-left" title="Popover left">lorum ipsum lorum ipsum</Popover>;
+const popoverTop = <Popover id="popover-positioned-top" title="Popover top">lorum ipsum lorum ipsum</Popover>;
+const popoverBottom = <Popover id="popover-positioned-bottom" title="Popover bottom">lorum ipsum lorum ipsum</Popover>;
+const popoverRight = <Popover id="popover-positioned-right" title="Popover right">lorum ipsum lorum ipsum</Popover>;
+
+const ExamplePopover = (
+    <ButtonToolbar>
+        <OverlayTrigger trigger='hover'  placement="left" overlay={popoverLeft}>
+          <Button>left PopOver!</Button>
+        </OverlayTrigger>
+        <OverlayTrigger trigger='hover'  placement="top" overlay={popoverTop}>
+          <Button>top PopOver!</Button>
+        </OverlayTrigger>
+        <OverlayTrigger trigger='hover'  placement="bottom" overlay={popoverBottom}>
+          <Button>bottom PopOver!</Button>
+        </OverlayTrigger>
+        <OverlayTrigger trigger='hover'  placement="right" overlay={popoverRight}>
+          <Button>right PopOver!</Button>
+        </OverlayTrigger>
+    </ButtonToolbar>
+);
+_pushExampleDom(
+    'Popover (tooltip)',
+    (
+        <article>
+            <ExamplePopover />
+        </article>
+    ),
+    '<OverlayTrigger trigger="hover|focus|click" placement="left" overlay={popoverLeft}></OverlayTrigger>'
+)
+
+
+
+
+
+
+
+
+
+//////////////////////////////////
+// finally render the examples...
+//////////////////////////////////
 //render
 ReactDom.render(
     <div>
