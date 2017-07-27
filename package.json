@@ -1,6 +1,6 @@
 {
   "name": "react-bootstrap-custom-boilerplate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "boilder plate to play with bootstrap customization (react bootstrap)",
   "main": "lib/main-js",
   "scripts": {
