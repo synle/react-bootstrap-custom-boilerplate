@@ -1,4 +1,6 @@
 const AjaxUtil = {
-    getText: () => console.bind(null, 'ajaxUtil.getText()')
+    getText: () => {
+        return 'yooooo'
+    }
 };
 export default AjaxUtil;
