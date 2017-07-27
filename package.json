@@ -2,10 +2,10 @@
   "name": "react-bootstrap-custom-boilerplate",
   "version": "1.0.0",
   "description": "boilder plate to play with bootstrap customization (react bootstrap)",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "build": "webpack",
-    "build-publish": "./node_modules/.bin/babel src -d public",
+    "build-publish": "./node_modules/.bin/babel src -d lib",
     "build-dev": "mkdir -p dist && cp -rf src/*.html dist && webpack",
     "start": "open dist/page*.html",
     "clean": "rm -rf dist",
