@@ -51,3 +51,19 @@ Special thanks to the following folks who created awesome frameworks.
 - Babel
 - Webpack
 - Facebook React
+
+
+
+## Notes
+```
+    // src
+    import AjaxUtil from './javascript/util/ajaxUtil'
+    // our lib
+    export {AjaxUtil}
+    // default export
+    export default AjaxUtil;
+
+    // usage
+    var ajaxUtil = require('react-bootstrap-custom-boilerplate').AjaxUtil;
+    ajaxUtil.getText()
+```

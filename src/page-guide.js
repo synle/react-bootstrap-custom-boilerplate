@@ -1,5 +1,6 @@
 // css code
-require('./index.jsx');
+require('./main-js');
+require('./main-css');
 require('./page-guide.scss'); // extra scss for the tutorial
 
 // js code

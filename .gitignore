@@ -1,5 +1,5 @@
-node_modules
-public
 *.log
 *.npm-debug
+node_modules
+public
 dist

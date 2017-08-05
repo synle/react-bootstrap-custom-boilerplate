@@ -12,8 +12,7 @@ var DEST_DIR = path.resolve(__dirname, 'dist');
 var config = {
     entry: {
         //[name] => entry
-        'page-guide': SRC_DIR + '/page-guide.jsx', // tutorial page
-        'index': SRC_DIR + '/index.jsx' // main bundle
+        'page-guide': SRC_DIR + '/page-guide.js' // tutorial page
     },
     output: {
         path: DEST_DIR,
